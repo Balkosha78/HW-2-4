@@ -7,7 +7,7 @@ public class Main {
         try {
             CheckValidator.checkValidate(login, password, confirmPassword);
         } catch (WrongLoginException | WrongPasswordException exception) {
-            exception.getStackTrace();
+            exception.printStackTrace();  // здесы была ошибка у меня. Было exception.getStackTrace();
         }finally {
             System.out.println("Авторизация завершена!");
         }
